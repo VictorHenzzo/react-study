@@ -4,10 +4,8 @@ import CoreConcept from "./components/CoreConcept/CoreConcept.jsx";
 import Examples from "./components/Examples/Examples.jsx";
 
 function App() {
-  console.log("build");
-
   return (
-    <div>
+    <>
       <Header />
       <main>
         <section id="core-concepts">
@@ -16,7 +14,7 @@ function App() {
         </section>
         <Examples />
       </main>
-    </div>
+    </>
   );
 }
 
