@@ -9,10 +9,7 @@ function App() {
     <>
       <Header />
       <main>
-        <section id="core-concepts">
-          <h2>Core Concepts</h2>
-          <CoreConceptList />
-        </section>
+        <CoreConceptList title="Core Concepts" />
         <Examples />
       </main>
     </>

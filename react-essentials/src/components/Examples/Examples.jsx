@@ -28,34 +28,25 @@ export default function Examples() {
     );
   }
 
+  const items = [
+    { key: "components", name: "Components" },
+    { key: "jsx", name: "JSX" },
+    { key: "props", name: "Props" },
+    { key: "state", name: "State" },
+  ];
+
   return (
     <section id="examples">
       <h2>Examples</h2>
       <menu>
-        <TabButton
-          onClick={() => handleSelect("components")}
-          isSelected={isSelected("components")}
-        >
-          Components
-        </TabButton>
-        <TabButton
-          onClick={() => handleSelect("jsx")}
-          isSelected={isSelected("jsx")}
-        >
-          JSX
-        </TabButton>
-        <TabButton
-          onClick={() => handleSelect("props")}
-          isSelected={isSelected("props")}
-        >
-          Props
-        </TabButton>
-        <TabButton
-          onClick={() => handleSelect("state")}
-          isSelected={isSelected("state")}
-        >
-          State
-        </TabButton>
+        {items.map((item) => (
+          <TabButton
+            onClick={() => handleSelect(item.key)}
+            isSelected={isSelected(item.key)}
+          >
+            {item.name}
+          </TabButton>
+        ))}
       </menu>
       {tabContent}
     </section>
