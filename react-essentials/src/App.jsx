@@ -1,6 +1,7 @@
 import { CORE_CONCEPTS } from "./data.js";
 import Header from "./components/Header/Header.jsx";
 import CoreConcept from "./components/CoreConcept/CoreConcept.jsx";
+import CoreConceptList from "./components/CoreConcept/CoreConceptList.jsx";
 import Examples from "./components/Examples/Examples.jsx";
 
 function App() {
@@ -10,16 +11,12 @@ function App() {
       <main>
         <section id="core-concepts">
           <h2>Core Concepts</h2>
-          <ul>{getConcepts()}</ul>
+          <CoreConceptList />
         </section>
         <Examples />
       </main>
     </>
   );
-}
-
-function getConcepts() {
-  return CORE_CONCEPTS.map((concept) => <CoreConcept {...concept} />);
 }
 
 export default App;

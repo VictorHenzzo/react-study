@@ -28,11 +28,6 @@ export default function Examples() {
     );
   }
 
-  console.log("components", isSelected("components"));
-  console.log("jsx", isSelected("jsx"));
-  console.log("props", isSelected("props"));
-  console.log("state", isSelected("state"));
-
   return (
     <section id="examples">
       <h2>Examples</h2>
